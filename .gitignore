@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Model checkpoints (use Git LFS or external storage)
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Results / output
+results/
+output/
+
+# Environment files
+.env
+.env.local
+
+# Logs
+*.log
+
+# Large data files
+*.fasta
+!app/static/example.fasta
+
+# PDFs
+*.pdf
