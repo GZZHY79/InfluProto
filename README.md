@@ -1,7 +1,7 @@
 # ProtoInflu: Prototype Learning for Influenza A Virus Host Prediction
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
 Predicting cross-species transmission of influenza A virus via **prototype learning** — modeling host adaptation as a **continuous evolutionary process** rather than a discrete classification problem.
 
@@ -25,16 +25,16 @@ ProtoInflu learns three **learnable prototype vectors** (one per host species) a
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/FluProto.git
+git clone https://github.com/GZZHY79/FluProto.git
 cd FluProto
 pip install -r requirements.txt
 ```
 
 ### Requirements
 
-- Python ≥ 3.9
-- PyTorch ≥ 2.0
-- Transformers ≥ 4.30
+- Python = 3.10.0
+- PyTorch = 2.10.0
+- Transformers = 4.57.1
 - NumPy, Pandas, Matplotlib, scikit-learn
 
 ## Quick Start
@@ -46,7 +46,7 @@ python -m protoinflu.inference \
     --checkpoint_path /path/to/model.bin \
     --input example.fasta \
     --output_dir ./results \
-    --device cpu
+    --device cuda
 ```
 
 **Input format**: A FASTA file with exactly 8 influenza A genomic segments in order:

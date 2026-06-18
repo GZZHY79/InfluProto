@@ -221,8 +221,8 @@ def main():
                         help="Output directory for results (default: ./results)")
     parser.add_argument("--num_hidden_layers", type=int, default=2,
                         help="Number of MEGATransformer hidden layers (default: 2)")
-    parser.add_argument("--device", type=str, default="cpu",
-                        help="Device to run on: 'cpu' or 'cuda' (default: cpu)")
+    parser.add_argument("--device", type=str, default="cuda",
+                        help="Device to run on: 'cpu' or 'cuda' (default: cuda)")
     args = parser.parse_args()
 
     os.makedirs(args.output_dir, exist_ok=True)

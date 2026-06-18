@@ -1,5 +1,6 @@
-torch>=2.0.0
-transformers>=4.30.0
+python=3.10
+torch=2.10.0
+transformers=4.57.1
 numpy
 pandas
 matplotlib
