@@ -50,7 +50,7 @@ output/
 
 # Large data files
 *.fasta
-!app/static/example.fasta
+!example.fasta
 
 # PDFs
 *.pdf
