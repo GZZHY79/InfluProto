@@ -1,11 +1,11 @@
 """
-Inference utilities for ProtoInflu.
+Inference utilities for InfluProto.
 
 Provides model loading, sequence prediction, FASTA parsing,
 and visualization. Usable as both a Python module and CLI script.
 
 CLI usage:
-    python -m protoinflu.inference \
+    python -m InfluProto.inference \
         --checkpoint_path model.bin \
         --input sample.fasta \
         --output_dir ./results
@@ -41,8 +41,8 @@ def load_model(checkpoint_path: str, device: str = "cpu",
         (model, tokenizer) tuple.
     """
     from transformers import MegaConfig, MegaModel
-    from protoinflu.model import HostPredictionModel
-    from protoinflu.tokenizer import BioTokenizer
+    from InfluProto.model import HostPredictionModel
+    from InfluProto.tokenizer import BioTokenizer
 
     # Auto-detect vocab file
     if not vocab_file:
@@ -211,7 +211,7 @@ def parse_fasta_file(filepath: str) -> List[str]:
 # ── CLI ────────────────────────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser(
-        description="ProtoInflu: Predict influenza A virus host from genomic sequences"
+        description="InfluProto: Predict influenza A virus host from genomic sequences"
     )
     parser.add_argument("--checkpoint_path", type=str, required=True,
                         help="Path to model checkpoint (.bin)")

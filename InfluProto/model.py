@@ -1,5 +1,5 @@
 """
-Model definition for ProtoInflu — prototype-based host prediction.
+Model definition for InfluProto — prototype-based host prediction.
 
 Architecture:
     8 viral segments (<sep>-joined) → MEGATransformer → Attention Pooling
@@ -95,7 +95,7 @@ class HostCapabilityHead(nn.Module):
 
 class HostPredictionModel(nn.Module):
     """
-    Full ProtoInflu model.
+    Full InfluProto model.
 
     encoder → pooling → prototype head (distances) → capability head (logits)
     """

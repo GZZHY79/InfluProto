@@ -1,4 +1,4 @@
-# ProtoInflu: Prototype Learning for Influenza A Virus Host Prediction
+# InfluProto: Prototype Learning for Influenza A Virus Host Prediction
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -9,7 +9,7 @@ Predicting cross-species transmission of influenza A virus via **prototype learn
 
 Traditional classification models force discrete host assignments (Human / Avian / Swine), but viral host adaptation is inherently **continuous** — intermediate strains can infect multiple hosts simultaneously.
 
-ProtoInflu learns three **learnable prototype vectors** (one per host species) and computes cosine distance from the viral genome embedding to each prototype. The prototype distance serves as a **quantifiable metric** for cross-species transmission potential.
+InfluProto learns three **learnable prototype vectors** (one per host species) and computes cosine distance from the viral genome embedding to each prototype. The prototype distance serves as a **quantifiable metric** for cross-species transmission potential.
 
 ```
 8 viral segments → MEGATransformer → Attention Pooling → 128-d embedding → cos(z, p_k) → Host Prediction
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 ### Command-Line Inference
 
 ```bash
-python -m protoinflu.inference \
+python -m InfluProto.inference \
     --checkpoint_path /path/to/model.bin \
     --input example.fasta \
     --output_dir ./results \
@@ -57,7 +57,7 @@ python -m protoinflu.inference \
 ### Python API
 
 ```python
-from protoinflu import load_model, predict, parse_fasta_file
+from InfluProto import load_model, predict, parse_fasta_file
 
 # Load model
 model, tokenizer = load_model("path/to/checkpoint.bin", device="cpu")
@@ -97,7 +97,7 @@ FluProto/
 ├── LICENSE
 ├── requirements.txt
 ├── example.fasta                   # Example input (EPI_ISL_277234)
-└── protoinflu/                     # Core Python package
+└── InfluProto/                     # Core Python package
     ├── __init__.py
     ├── model.py                    # HostPredictionModel, prototype heads
     ├── tokenizer.py                # Custom BioTokenizer
@@ -118,10 +118,10 @@ The checkpoint is a standard PyTorch `.bin` file containing the full model state
 
 ## Citation
 
-If you use ProtoInflu in your research, please cite:
+If you use InfluProto in your research, please cite:
 
 ```bibtex
-@article{geng2025protoinflu,
+@article{geng2025influproto,
   title   = {Predicting Cross-Species Transmission of Influenza A Virus via Prototype Learning},
   author  = {Geng, Zongyi},
   journal = {TBD},

@@ -1,5 +1,5 @@
 """
-ProtoInflu — Prototype Learning for Influenza A Virus Host Prediction.
+InfluProto — Prototype Learning for Influenza A Virus Host Prediction.
 
 Predicts host tropism (Human, Avian, Swine) using learnable prototype vectors
 and cosine distance, capturing the continuous nature of viral host adaptation.
